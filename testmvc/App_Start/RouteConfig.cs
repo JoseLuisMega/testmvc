@@ -9,8 +9,11 @@ namespace testmvc
 {
     public class RouteConfig
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public static void RegisterRoutes(RouteCollection routes)
         {
+            log.Info("Esto es una prueba de Log");
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
